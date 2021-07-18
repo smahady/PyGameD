@@ -352,7 +352,7 @@ class SQUID(Character):
 		self.posY = 150
 		self.dx = 4
 		self.dy = 4
-		self.boundAction = Scene.WRAP
+
 
 		# add loadAnimation, generateAnimation, setAnimationSpeed, and playAnimation methods
 		self.loadAnimation(484, 346, 96, 173)
