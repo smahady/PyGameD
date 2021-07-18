@@ -285,13 +285,13 @@ class slimy(Character):
 		super().update(offsetX, offsetY)
 		
 	def walkBehavior(self):
-		if self.Keys.keysDown[Keys.K_RIGHT]:
+		if self.game.keysDown[Keys.K_RIGHT]:
 			self.facing = 0
 			self.setCurrentCycle(0)
 			self.playAnimation()
 			self.dx = 7
 			self.state = States.WALK
-		elif self.Keys.keysDown[Keys.K_LEFT]:
+		elif self.game.keysDown[Keys.K_LEFT]:
 			self.facing = 1
 			self.setCurrentCycle(1)
 			self.playAnimation()
@@ -323,13 +323,13 @@ class IEATTERMITES(Character):
 
 
   def walkBehavior(self):
-    if self.Keys.keysDown[Keys.K_RIGHT]:
+    if self.game.keysDown[Keys.K_RIGHT]:
       self.facing = 0
       self.setCurrentCycle(Facing.RIGHT)
       self.playAnimation()
       self.dx = 15
       self.state = States.WALK
-    elif self.Keys.keysDown[Keys.K_LEFT]:
+    elif self.game.keysDown[Keys.K_LEFT]:
       self.facing = 1
       self.setCurrentCycle(2)
       self.playAnimation()
@@ -404,13 +404,13 @@ class MEEEEEE(Character):
 		super().update(offsetX, offsetY)
 
 	def walkBehavior(self):
-		if self.keys.keysDown[Keys.k_RIGHT]:
+		if self.game.keysDown[Keys.k_RIGHT]:
 			self.facing = 0
 			self.setCurrentCycle(0)
 			self.playAnimation()
 			self.dx = 15
 			self.state = States.WALK
-		elif self.Keys.keysDown[Keys.k_LEFT]:
+		elif self.game.keysDown[Keys.k_LEFT]:
 			self.facing = 1
 			self.setCurrentCycle(1)
 			self.playAnimation()
