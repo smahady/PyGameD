@@ -278,7 +278,7 @@ class slimy(Character):
 		self.posY = 200
 		self.dy = 3
 		self.loadAnimation(88, 64, 29, 32)
-		self.setAnimationSpeed(100)
+		self.setAnimationSpeed(10)
 		self.playAnimation()
 		self.state = States.FALLING
 	def update(self, offsetX, offsetY):
