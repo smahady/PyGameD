@@ -43,7 +43,7 @@ class Block(Spritesheet):
 			amountBelow = spriteTop - bottom
 				
 			# amountLeft is highest
-			if (amountLeft > amountRight and amountLeft > amountAbove and amountLeft > amountBelow):
+			'''if (amountLeft > amountRight and amountLeft > amountAbove and amountLeft > amountBelow):
 				self.isLeft = True
 				self.isRight = False
 				self.isAbove = False
@@ -58,7 +58,7 @@ class Block(Spritesheet):
 				self.isLeft = False
 				self.isAbove = False
 				self.isRight = False				
-			else:
+			else:'''
 				self.isAbove = True
 				self.isLeft = False
 				self.isBelow = False
