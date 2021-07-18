@@ -273,11 +273,11 @@ class Sean(Character):
 #Newton
 class slimy(Character):
 	def __init__(self, thisScene):
-		super().__init__(thisScene, "sprites/newton_sheet.png",88,64)
+		super().__init__(thisScene, "sprites/newton_sheet.png",176,128)
 		self.posX = 350
 		self.posY = 200
 		self.dy = 3
-		self.loadAnimation(88, 64, 29, 32)
+		self.loadAnimation(176, 128, 58, 64)
 		self.setAnimationSpeed(10)
 		self.playAnimation()
 		self.state = States.FALLING
