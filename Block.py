@@ -59,10 +59,10 @@ class Block(Spritesheet):
 				self.isAbove = False
 				self.isRight = False				
 			else:'''
-				self.isAbove = True
-				self.isLeft = False
-				self.isBelow = False
-				self.isRight = False				
+			self.isAbove = True
+			self.isLeft = False
+			self.isBelow = False
+			self.isRight = False				
 				
 				
 			#move the sprite back
