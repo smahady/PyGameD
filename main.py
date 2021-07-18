@@ -197,14 +197,14 @@ class Character(Spritesheet):
 			if self.game.ground.collidesWith(self):
 				self.standBehavior()
 		elif self.state == States.STAND or self.state == States.WALK:
-			if self.game.keysDown[Keys.kK_SPACE]:
+			if self.game.keysDown[Keys.K_SPACE]:
 				self.jumpBehavior()
-			elif self.game.keysDown[Keys.kK_RIGHT] or self.game.keysDown[Keys.kK_LEFT]:
+			elif self.game.keysDown[Keys.K_RIGHT] or self.game.keysDown[Keys.kK_LEFT]:
 				self.walkBehavior()
 			elif self.state == States.WALK:
-				if (self.facing == Facing.RIGHT) and (self.game.keysDown[Keys.kK_RIGHT] == False):
+				if (self.facing == Facing.RIGHT) and (self.game.keysDown[Keys.K_RIGHT] == False):
 					self.standBehavior()
-				if (self.facing == Facing.LEFT) and (self.game.keysDown[Keys.kK_LEFT] == False):
+				if (self.facing == Facing.LEFT) and (self.game.keysDown[Keys.K_LEFT] == False):
 					self.standBehavior()
 		elif self.state == States.JUMP:
 			self.stateTimer = self.stateTimer - 1
@@ -356,7 +356,6 @@ class SQUID(Character):
 
 		# add loadAnimation, generateAnimation, setAnimationSpeed, and playAnimation methods
 		self.loadAnimation(484, 346, 96, 173)
-		self.generateAnimationCycles()
 		self.setAnimationSpeed(30)
 		self.playAnimation()
 	def update(self, offsetX, offsetY):
@@ -396,7 +395,6 @@ class MEEEEEE(Character):
 		self.posX = 300
 		self.posY = 30
 		self.dy = 4
-		self.boundAction = Scene.WRAP
 		self.loadAnimation(400, 144 , 100, 72)
 
 		self.setAnimationSpeed(30)
