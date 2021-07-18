@@ -199,7 +199,7 @@ class Character(Spritesheet):
 		elif self.state == States.STAND or self.state == States.WALK:
 			if self.game.keysDown[Keys.K_SPACE]:
 				self.jumpBehavior()
-			elif self.game.keysDown[Keys.K_RIGHT] or self.game.keysDown[Keys.kK_LEFT]:
+			elif self.game.keysDown[Keys.K_RIGHT] or self.game.keysDown[Keys.K_LEFT]:
 				self.walkBehavior()
 			elif self.state == States.WALK:
 				if (self.facing == Facing.RIGHT) and (self.game.keysDown[Keys.K_RIGHT] == False):
@@ -363,13 +363,13 @@ class SQUID(Character):
 
 
 	def walkBehavior(self):
-		if self.keys.keysDown[Keys.K_RIGHT]:
+		if self.keysDown[Keys.K_RIGHT]:
 			self.facing = Facing.RIGHT
 			self.setCurrentCycle(Facing.RIGHT)
 			self.playAnimation()
 			self.dx = 10
 			self.state = States.WALK
-		elif self.keys.keysDown[Keys.K_LEFT]:
+		elif self.keysDown[Keys.K_LEFT]:
 			self.facing = Facing.LEFT
 			self.setCurrentCycle(Facing.LEFT)
 			self.playAnimation()
