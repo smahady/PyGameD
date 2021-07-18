@@ -363,13 +363,13 @@ class SQUID(Character):
 
 
 	def walkBehavior(self):
-		if self.keysDown[Keys.K_RIGHT]:
+		if self.game.keysDown[Keys.K_RIGHT]:
 			self.facing = Facing.RIGHT
 			self.setCurrentCycle(Facing.RIGHT)
 			self.playAnimation()
 			self.dx = 10
 			self.state = States.WALK
-		elif self.keysDown[Keys.K_LEFT]:
+		elif self.game.keysDown[Keys.K_LEFT]:
 			self.facing = Facing.LEFT
 			self.setCurrentCycle(Facing.LEFT)
 			self.playAnimation()
